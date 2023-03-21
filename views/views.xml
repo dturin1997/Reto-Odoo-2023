@@ -1,6 +1,6 @@
 <odoo>
   <data>
-    <!-- Vistas de Subject -->
+    <!-- Materia -->
     <record model="ir.ui.view" id="reto-odoo.subject_list_view">
       <field name="name">reto-odoo.subject.view.tree</field>
       <field name="model">reto_odoo.subject</field>
@@ -10,6 +10,8 @@
           <field name="credits"/>
           <field name="max_students"/>
           <field name="active"/>
+          <field name="students_ids"/>
+          <field name="teacher_id"/>
         </tree>
       </field>
     </record>
@@ -40,7 +42,7 @@
 
     
 
-    <!-- Vistas para Estudiantes -->
+    <!-- Estudiantes -->
     <record model="ir.ui.view" id="reto-odoo.student_list_view">
       <field name="name">reto-odoo.student.view.tree</field>
       <field name="model">reto_odoo.student</field>
@@ -77,7 +79,7 @@
       </field>
     </record>
 
-    <!-- Vistas para Profesores -->
+    <!-- Profesores -->
     <record model="ir.ui.view" id="reto-odoo.teacher_list_view">
       <field name="name">reto-odoo.teacher.view.tree</field>
       <field name="model">reto_odoo.teacher</field>

@@ -1,2 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_reto-odoo_reto-odoo,reto-odoo.reto-odoo,model_reto-odoo_reto-odoo,base.group_user,1,1,1,1
+access_reto-odoo_student_profesor,reto-odoo.student.profesor,model_reto_odoo_student,reto-odoo.group_reto-odoo_profesor,1,1,1,1

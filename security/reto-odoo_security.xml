@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <data>
+        <!-- Definir una categoria -->
+        <record model="ir.module.category" id="reto-odoo.module_category_reto-odoo">
+            <field name="name">School</field>
+            <field name="description">Ayuda a gestionar tu colegio</field>
+            <field name="sequence">100</field>
+        </record>
+
+        <record model="res.groups" id="group_reto-odoo_profesor">
+            <field name="name">Profesor</field>
+            <field name="category_id" ref="reto-odoo.module_category_reto-odoo" />
+            <field name="comment">Profesores que gestionan notas </field>
+        </record>
+
+        <record model="res.groups" id="group_reto-odoo_admin">
+            <field name="name">Administracion</field>
+            <field name="category_id" ref="reto-odoo.module_category_reto-odoo" />
+            <field name="comment">Administradores que visualizan y editan</field>
+            <!-- Los miembros también realizan lo de profesor -->
+            <field name="implied_ids" eval="[(4, ref('group_reto-odoo_profesor'))]" />
+            <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]" />
+        </record>
+    </data>
+</odoo>
